@@ -1,0 +1,395 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.main_report_container {
+  margin-top: 3px;
+}
+
+.title_report {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.on_hover_underline {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.on_hover_underline:hover {
+  text-decoration: underline !important;
+}
+
+.card_grid_container {
+  gap: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #212639;
+  height: 462px;
+  padding: 8px;
+}
+
+.card_grid_container_light {
+  gap: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #f2f6f8;
+  height: 462px;
+  margin: 8px;
+  padding: 8px;
+}
+
+.content_container {
+  position: relative;
+  gap: 5px;
+  padding: 12px;
+  height: 150px;
+}
+
+.main_card {
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: #292e3f;
+  height: 215px;
+}
+
+.main_card_light {
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  height: 215px;
+}
+
+.flex_title_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.active_button {
+  background-image: linear-gradient(
+    to right,
+    #6db8fd,
+    #1774ff,
+    #6db8fd,
+    #1774ff
+  );
+  background-size: 300% 100%;
+  box-shadow: 0 1px 1px 0 rgba(65, 132, 234, 0.75);
+  transition: all 0.4s ease-in-out;
+  color: white;
+}
+
+.lightMode_inactive {
+  background-color: #f2f6f8;
+  color: black;
+}
+
+.inactive_button {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.ipo_image {
+  border-radius: 12px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    height: 150px;
+  }
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin-top: 10px;
+}
+
+.date {
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+  .card_grid_container {
+    gap: 10px;
+    height: auto;
+    margin: 0px;
+    padding: 8px;
+  }
+
+  .card_grid_container_light {
+    gap: 10px;
+    height: auto;
+    margin: 0px;
+    padding: 8px;
+  }
+  .content_container {
+    position: relative;
+    gap: 5px;
+    padding: 8px;
+    height: auto;
+  }
+
+  .main_card {
+    height: auto;
+  }
+
+  .main_card_light {
+    height: auto;
+  }
+
+  .flex_title_button {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* ===============================
+   TECH MODAL – SAME CARD LAYOUT
+   =============================== */
+
+.techModalWrapper :global(.ant-modal-content) {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Card shell */
+.techModalCard {
+  background: #292e3f;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.techModalCardLight {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Content */
+.techModalContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top overlay */
+.techModalTop {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.techModalTop span {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Image */
+.techModalImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px 16px 0 0;
+}
+
+/* Description wrapper */
+.techModalDesc {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  color: #fff;
+}
+
+.techModalDescLight {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  color: #111;
+}
+
+/* Body grows, date sticks bottom */
+.techModalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Company bar */
+.techModalCompanyBar {
+  position: relative;
+  width: 100%;
+  padding: 0 12px 12px 12px;
+  font-weight: 600;
+}
+
+/* Chips */
+.techModalChips {
+  display: flex;
+  gap: 10px;
+}
+
+.techModalChip {
+  background: #3b3f4f;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.techModalChipLight {
+  background: #f2f6f8;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Description text */
+.techModalText {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Date pinned */
+.techModalDate {
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .techModalWrapper :global(.ant-modal) {
+    max-width: 92vw;
+  }
+
+  .techModalChips {
+    flex-direction: column;
+  }
+}
+
+/* Aspect-ratio image wrapper */
+.techModalImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* 🔥 guarantees correct ratio */
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  background: #000;
+}
+
+/* Image itself */
+.techModalImage {
+  object-fit: cover; /* no stretching */
+}
+
+.new_chip {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ff2d2d;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+
+  padding: 6px 12px;
+  border-radius: 4px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+.new_badge {
+  position: absolute;
+  top: 5px;
+  right: -10px;
+
+  width: 80px;
+  height: 22px;
+
+  background: linear-gradient(120deg, #ff7a18, #ffb347, #ff7a18);
+  background-size: 200% 200%;
+  animation: badgeGradient 3s ease-in-out infinite;
+
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 8px;
+
+  border-radius: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes badgeGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.rhombusStrip {
+  position: absolute;
+  top: 7px;
+  right: 0px;
+  transform: translateX(9px) translateY(4px);
+  width: 10px; /* swapped width and height */
+  height: 24px;
+  background:
+    linear-gradient(90deg, #f37435c5 4.83%, #fcbf30bb 95.32%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+  clip-path: polygon(
+    0% 30%,
+    /* left-top point */ 100% 0%,
+    /* right-top point */ 100% 70%,
+    /* right-bottom point */ 0% 100% /* left-bottom point */
+  );
+}

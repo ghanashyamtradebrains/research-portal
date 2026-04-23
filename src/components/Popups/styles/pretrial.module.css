@@ -1,0 +1,82 @@
+.modal_body {
+  height: 450px;
+  background-image: url("/bg/star_bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  position: relative;
+  margin: -24px;
+}
+
+.icon_wrapper {
+  /* margin-bottom: 24px; */
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.cta_button {
+  background: linear-gradient(90deg, #f37335 4.83%, #fcc030 95.32%);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-top: 32px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  width: 80%;
+}
+
+.cta_button:hover {
+  opacity: 0.9;
+}
+
+.modal_body_light {
+  background-image: url("/bg/trialpopup_bg_light.webp"); /* Use your actual light version */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  color: #000; /* Black text for light mode */
+  position: relative;
+  margin: -24px;
+}
+
+/* Optionally override specific text */
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.modal_body_light .title {
+  color: #121212;
+}
+
+.modal_body_light .subtitle {
+  color: #333;
+  opacity: 1;
+}
+
+.modal_body_light .cta_button {
+  color: #fff; /* Keep white button text */
+}

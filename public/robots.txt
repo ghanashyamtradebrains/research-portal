@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://portal.tradebrains.in/sitemap.xml
+User-agent: SemrushBot
+Disallow: /

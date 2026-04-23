@@ -1,0 +1,158 @@
+.home_index_card {
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 330px;
+  width: 33%;
+  min-height: 130px;
+  height: 130px;
+  /* overflow-y: auto; */
+}
+
+
+.overflow_md_scroll_dash {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.overflow_md_scroll_dash::-webkit-scrollbar {
+  color: black;
+}
+
+.bg_light_mode_grey {
+  background-color: #f2f6fb;
+}
+
+.card_drop_dark_shadow_home_page {
+  background: #212639;
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+}
+
+.flex_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.flex_item {
+  display: flex;
+  align-items: center;
+  margin-top: -20px;
+}
+
+.image {
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: white;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: end;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+}
+
+.text {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.scroll_indices {
+  padding: 50px;
+  margin-top: -100px;
+}
+
+.only_pc_view {
+  display: block;
+}
+
+.only_mobile_view {
+  display: none;
+}
+
+.skeleton_circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #292e3f;
+}
+
+.skeleton_text,
+.skeleton_line {
+  width: 120px;
+  height: 12px;
+  background: #292e3f;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.skeleton_line_small {
+  width: 80px;
+  height: 10px;
+  background: #292e3f;
+  border-radius: 4px;
+}
+
+.index_name_container{
+  height: 40px !important;
+  width: 100%;
+  margin-left: 10px;
+}
+
+@media (max-width: 1024px) {
+  .home_index_card {
+    padding: 10px;
+  }
+
+  .only_pc_view {
+    display: none;
+  }
+
+  .only_mobile_view {
+    display: block;
+  }
+
+  .scroll_indices {
+    padding: 50px;
+    margin-top: -90px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 968px) {
+  .scroll_indices {
+    padding: 10px;
+    margin-top: -220px;
+  }
+
+  .home_index_card {
+  min-height: 110px;
+  height: 100px;
+  /* overflow-y: auto; */
+}
+
+}

@@ -1,0 +1,264 @@
+.mobileNavBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 499;
+  padding: 1px 6px 8px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.mobileNavBar.notLoggedIn {
+  bottom: 28px;
+}
+
+.mobileNavBar.lightMode {
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+}
+
+.mobileNavBar.darkMode {
+  background-color: #292e3f;
+  border-top: 1px solid #3d4254;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  flex: 1;
+  max-width: 80px;
+}
+
+.navItem:active {
+  transform: scale(0.95);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.iconWrapper svg {
+  width: 24px;
+  height: 24px;
+}
+
+.lightMode .iconWrapper svg path {
+  fill: #666666;
+}
+
+.darkMode .iconWrapper svg path {
+  fill: #a8b2c8;
+}
+
+.activeIcon svg path {
+  fill: #6DB8FD !important;
+}
+
+
+
+.navIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0.9);
+  transition: filter 0.2s ease;
+}
+
+.lightMode .navIcon {
+  filter: brightness(0.4);
+}
+
+.darkMode .navIcon {
+  filter: brightness(1.2);
+}
+
+.navLabel {
+  font-size: 11px;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.lightMode .navLabel {
+  color: #333333;
+}
+
+.darkMode .navLabel {
+  color: #a8b2c8;
+}
+
+
+.activeLabel {
+  background: #6DB8FD;;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+
+.specialNavItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 100px;
+  height: 32px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.askAiButton {
+  position: relative;
+  width: 80px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.askAiButton:active {
+  transform: scale(0.95);
+}
+
+.rotatingBorder {
+  position: absolute;
+  width: 77px;
+  height: 73px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 0deg,
+    #f37335 70deg,
+    #fcc030 110deg,
+    transparent 180deg,
+    transparent 180deg,
+    #f37335 250deg,
+    #fcc030 290deg,
+    transparent 420deg
+  );
+  animation: rotateBorder 3s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rotateBorder {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.askAiContent {
+  position: relative;
+  z-index: 2;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.lightMode .askAiContent {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+}
+
+.darkMode .askAiContent {
+  background-color: #292e3f;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
+}
+
+.sparkleIcon {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+.askAiText {
+  font-size: 12px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #f37335, #fcc030, #f37335);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shine 3s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@media (max-width: 375px) {
+  .mobileNavBar {
+    padding: 1px 12px 6px;
+  }
+
+  .navLabel {
+    font-size: 10px;
+  }
+
+  .askAiButton {
+    width: 70px;
+    height: 25px;
+  }
+
+  .rotatingBorder {
+    width: 68px;
+    height: 64px;
+  }
+
+  .askAiContent {
+    width: 64px;
+    height: 64px;
+  }
+
+  .specialNavItem {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 500px) {
+  .navContainer {
+    gap: 8px;
+  }
+}

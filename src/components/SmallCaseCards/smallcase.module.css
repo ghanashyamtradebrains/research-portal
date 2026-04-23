@@ -1,0 +1,202 @@
+.portfolio_container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #1f1f1f;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.portfolio_container_light {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.portfolio_card,
+.portfolio_card_light {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 14px 18px;
+  border: 1px solid #2e3344;
+}
+
+.portfolio_card {
+  background-color: #131315;
+}
+
+.portfolio_card_light {
+  background-color: #f9f9f9;
+  border: 1px solid #dcdcdc;
+}
+
+/* Left part */
+.card_left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo_img {
+  border-radius: 6px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.card_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  width: 100%;
+  /* text-align: center; */
+  border-left: none;
+}
+
+.card_info > div {
+  flex: 1;
+  position: relative;
+  padding: 0 12px;
+}
+
+.card_info > div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.portfolio_card_light .card_info > div:not(:last-child)::after {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.btn_bg_gradient {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #f37335 4.83%, #fcc030 95.32%);
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  flex: 1;
+  font-family: "Lato", sans-serif;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.value {
+  display: block;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.risk_low {
+  color: #00c853;
+}
+
+.risk_medium {
+  color: #fbc02d !important;
+}
+
+.risk_high {
+  color: #ff5252;
+}
+
+.card_right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.subscribe_btn {
+  background-color: #ff8c00;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  width: auto;
+  font-family: "Lato", sans-serif;
+}
+
+.plan_text {
+  display: block;
+  font-size: 11px;
+  opacity: 0.8;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.number_font {
+  font-family: "Lato", sans-serif;
+}
+
+.number_font_blur {
+  filter: blur(4px);
+  color: #00ff57;
+}
+
+@media screen and (max-width: 900px) {
+  .portfolio_card,
+  .portfolio_card_light {
+    grid-template-columns: 1fr;
+    /* gap: 8px; */
+    text-align: left;
+    padding: 10px 10px;
+  }
+
+  .card_info > div {
+    flex: 1;
+    position: relative;
+    padding: 0 10px;
+  }
+
+  .card_info {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1px;
+  }
+
+  .card_right {
+    align-items: flex-start;
+  }
+
+  .subscribe_btn {
+    width: 100%;
+  }
+
+  .plan_text {
+    text-align: left;
+  }
+  .btn_bg_gradient {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(90deg, #f37335 4.83%, #fcc030 95.32%);
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    flex: 1;
+  }
+}

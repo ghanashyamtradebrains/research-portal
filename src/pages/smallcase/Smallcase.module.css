@@ -1,0 +1,134 @@
+.profile_container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 10px 0;
+}
+
+.profile_container_light {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.container_light {
+  width: 100%;
+  background-color: #f2f6f8;
+  padding: 16px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  border-radius: 16px;
+}
+
+.card_title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px !important;
+}
+
+.container {
+  width: 100%;
+  background-color: #1f1f1f !important;
+  padding: 16px;
+  margin-bottom: 10px;
+  margin-top: 16px;
+  border-radius: 16px;
+}
+
+.profile_card {
+  display: flex;
+  gap: 10px;
+  background-color: #131315;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.profile_card_light {
+  display: flex;
+  gap: 10px;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.profile_details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  line-height: 22px;
+  letter-spacing: 2%;
+}
+
+.profile_details_light {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.desc_summary {
+  color: #d3d3d3;
+  line-height: 20px;
+  letter-spacing: 2%;
+  margin-top: 6px;
+}
+
+.desc_summary_light {
+  color: #000;
+  line-height: 20px;
+  letter-spacing: 2%;
+  margin-top: 6px;
+}
+
+.detailed_desc {
+  cursor: pointer;
+  color: #6db8fd;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.shortDesc {
+  margin: 6px 0px !important;
+}
+
+.profile_title {
+  font-weight: 500;
+  margin-top: -5px;
+}
+
+.number_font_blur {
+  filter: blur(3px);
+}
+
+@media screen and (max-width: 768px) {
+  .detailed_desc {
+    background: #6db8fd33;
+    text-align: center;
+    gap: 10px;
+    opacity: 1;
+    border-radius: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .profile_details {
+    width: 50%;
+  }
+
+  .profile_title {
+    margin-top: 0px;
+  }
+
+  .desc_summary {
+    margin-top: 12px;
+    -webkit-line-clamp: 6;
+  }
+
+  .desc_summary_light {
+    margin-top: 12px;
+    -webkit-line-clamp: 6;
+  }
+  .bread_container {
+    padding: 0 16px;
+  }
+}

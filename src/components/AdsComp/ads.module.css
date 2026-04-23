@@ -1,0 +1,21 @@
+.card {
+  width: 100% !important;
+  height: 320px !important;
+  border-radius: 16px;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  position: relative;
+}
+
+@media (max-width: 1880px) {
+  .card {
+    height: 320px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    height: 350px !important;
+  }
+}

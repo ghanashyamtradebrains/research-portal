@@ -1,0 +1,129 @@
+.surveyTitle {
+  color: #fff !important;
+  font-size: 26px !important;
+  font-weight: 600 !important;
+}
+
+.surveyTitle_light {
+  color: #000 !important;
+  font-size: 26px !important;
+  font-weight: 600 !important;
+}
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  height: 600px;
+}
+
+.surveyContent {
+  padding: 1rem 0;
+}
+
+.questionContainer {
+  margin-bottom: 1.5rem;
+}
+
+.questionHeader {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.questionNumber {
+  font-size: 1.125rem;
+  font-family: lato;
+}
+
+.questionText {
+  font-size: 16px;
+  flex: 1;
+  font-family: Poppins;
+}
+
+.radioGroup {
+  width: 100%;
+}
+
+.optionsContainer {
+  width: 100%;
+}
+
+.radioOption {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  width: 100%;
+  margin-right: 0;
+}
+
+.customInput {
+  margin-top: 0.75rem;
+  font-family: poppins;
+  background-color: #212639;
+  border: 1px solid #545e78;
+}
+
+.customInput::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+.customInput_light {
+  margin-top: 0.75rem;
+  font-family: poppins;
+}
+
+.noQuestionsMessage {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.footerContainer > button {
+  background: linear-gradient(
+    90.15deg,
+    #6db8fd 0.17%,
+    #1e7aff 96.17%,
+    #1774ff 104.9%
+  );
+  border: none;
+}
+
+.action_container * {
+  color: white;
+  font-family: poppins;
+}
+
+.action_container_light * {
+  color: black;
+  font-family: poppins;
+}
+
+@media (max-width: 768px) {
+  /* Shared font size 20 */
+  .surveyTitle,
+  .surveyTitle_light {
+    font-size: 20px !important;
+  }
+
+  /* Shared font size 14 */
+  .questionText,
+  .radioOption,
+  .customInput,
+  .customInput_light,
+  .questionNumber {
+    font-size: 14px;
+  }
+
+  /* Unique style */
+  .questionNumber {
+    font-family: lato;
+  }
+}

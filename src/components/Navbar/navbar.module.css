@@ -1,0 +1,197 @@
+.width_nav_bar {
+  width: 70% !important;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_list_dashboard {
+  width: 85%;
+}
+
+.nav_list {
+  width: 90% !important;
+}
+
+.burger_menu {
+  display: none;
+}
+
+.only_PC_view {
+  display: block;
+}
+
+.search_mobile {
+  display: none;
+}
+
+.font_size {
+  font-size: 14px;
+}
+
+.portal_ai_animated {
+  background: linear-gradient(90deg, #f37335, #fcc030, #f37335);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+}
+
+@-moz-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+
+  60% {
+    background-position: 180px;
+  }
+
+  100% {
+    background-position: 180px;
+  }
+}
+
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+
+  60% {
+    background-position: 180px;
+  }
+
+  100% {
+    background-position: 180px;
+  }
+}
+
+@-o-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+
+  60% {
+    background-position: 180px;
+  }
+
+  100% {
+    background-position: 180px;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+
+  60% {
+    background-position: 180px;
+  }
+
+  100% {
+    background-position: 180px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .width_nav_bar {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .width_nav_bar {
+    width: 90% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .font_size {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav_list_dashboard {
+    display: none;
+  }
+
+  .nav_list {
+    display: none;
+  }
+
+  .burger_menu {
+    display: inline-flex;
+    position: absolute;
+    right: 14px;
+  }
+
+  .only_PC_view {
+    display: none;
+  }
+}
+
+@media (max-width: 968px) {
+  .search_mobile {
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+.dropdown_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px !important;
+  padding: 8px 12px;
+  margin-right: -12px;
+  border-radius: 5px;
+  transition: background 0.3s ease-out;
+  color: #f1f1f1;
+  font-weight: 500;
+}
+
+.dropdown_item_light {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px !important;
+  padding: 8px 12px;
+  margin-right: -12px;
+  border-radius: 5px;
+  color: #000;
+  transition: background 0.3s ease-out;
+}
+
+.dropdown_item:hover {
+  background-color: #202e4c;
+  color: #6db8fd;
+}
+
+.active {
+  background: #1890ff !important;
+  /* Change color as needed */
+  color: white !important;
+  font-weight: bold;
+}
+
+.search_btn {
+  position: absolute;
+  margin: 5px 10px 0 0;
+}

@@ -1,0 +1,51 @@
+.main_container {
+    background-color: #3b3f4f !important; 
+     border-radius: 8px;
+     padding: 10px;
+     margin-bottom: 10px;
+     position: relative;
+     z-index: 100;
+   }
+   
+   .main_container_light {
+     background-color: #f2f6f8 !important;
+     border-radius: 8px;
+     padding: 10px;
+     margin-bottom: 10px;
+     position: relative;
+     z-index: 100;
+     margin-top: -2px;
+   }
+   
+   .flex_card {
+     display: flex;
+     justify-content: space-around !important;
+   }
+   
+   .nav_item {
+     cursor: pointer;
+     color: #afafaf;
+     font-weight: 400;
+   }
+   
+   .nav_item span {
+     position: relative;
+     display: inline-block;
+   }
+   
+   .active {
+     color: #6db8fd;
+     font-weight: 500;
+   }
+   
+   .active span::after {
+     content: "";
+     position: absolute;
+     bottom: -10px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: calc(100% + 20px);
+     height: 1px;
+     background-color: #6db8fd;
+   }
+   

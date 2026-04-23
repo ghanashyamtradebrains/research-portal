@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+  research_portal:
+    build:
+      context: ./research-portal # 👈 your new project folder
+      dockerfile: Dockerfile
+      args:
+        NEXT_APP_FIREBASE_APIKEY: ${NEXT_APP_FIREBASE_APIKEY}
+        NEXT_APP_FIREBASE_AUTH: ${NEXT_APP_FIREBASE_AUTH}
+        NEXT_APP_FIREBASE_ID: ${NEXT_APP_FIREBASE_ID}
+        NEXT_APP_FIREBASE_BUCKET: ${NEXT_APP_FIREBASE_BUCKET}
+        NEXT_APP_FIREBASE_MSGID: ${NEXT_APP_FIREBASE_MSGID}
+        NEXT_APP_FIREBASE_APPID: ${NEXT_APP_FIREBASE_APPID}
+
+        # 👇 IMPORTANT: new frontend URL
+        NEXT_APP_HOST_URL: ${NEXT_APP_RESEARCH_HOST_URL}
+
+        # 👇 same backend
+        NEXT_APP_BASE_URL: ${NEXT_APP_BASE_URL}
+        NEXT_APP_NEWS_BASE_URL: ${NEXT_APP_NEWS_BASE_URL}
+
+    volumes:
+      - research_portal:/app/
+
+    restart: always
+
+    ports:
+      - "3031:3030" # 👈 different from old portal
+
+    networks:
+      - portal_network
+
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 30s
+      resources:
+        limits:
+          memory: 2g
+        reservations:
+          memory: 2g
+
+volumes:
+  research_portal:
+    external: true # 👈 create once using docker volume create
+
+networks:
+  portal_network:
+    external: true

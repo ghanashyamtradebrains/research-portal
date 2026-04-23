@@ -1,0 +1,188 @@
+.rating_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  color: white;
+}
+
+.left_container {
+  background-color: #212223;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.rating_item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.rating_title {
+  width: 20%;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.rating_header {
+  width: 20%;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.rating_header_value {
+  width: 80%;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.rating_value {
+  width: 80%;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.rating_note {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.border_rated {
+  border: 2px solid #424e63 !important;
+  color: #424e63 !important;
+}
+
+.flex_top_container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #212223;
+  width: 93%;
+  padding: 10px;
+  border-radius: 8px;
+  gap: 10px;
+}
+.top_left_block {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 10px;
+}
+.company_header_row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.company_image {
+  width: 60px;
+  height: 60px;
+}
+
+.company_name {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+  color: #fdb56d;
+}
+
+.flex_other_properties {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.flex_other_properties {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.center_align_buy {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  min-width: 80px;
+}
+
+.item_cont {
+  background-color: #343434;
+  padding: 4px 8px;
+  color: white;
+  border-radius: 4px;
+  font-family: "Lato", sans-serif;
+}
+
+.potential_upside {
+  color: #00ff57;
+  font-family: "Lato", sans-serif;
+}
+
+.price_reco {
+  font-family: "Lato", sans-serif;
+}
+
+.target_price {
+  font-family: "Lato", sans-serif;
+}
+
+.main_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  margin-top: 30px;
+}
+
+@media (max-width: 650px) {
+  .flex_top_container {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .top_left_block {
+    width: 100%;
+  }
+
+  .company_header_row {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .company_name {
+    font-size: 18px;
+  }
+
+  .flex_other_properties {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .flex_other_properties .item_cont {
+    width: 100%;
+  }
+
+  .center_align_buy {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .main_container {
+    padding: 0px 10px;
+  }
+}

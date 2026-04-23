@@ -1,0 +1,164 @@
+.profile_container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 10px 0;
+}
+
+.profile_container_light {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.profile_card {
+  display: flex;
+  gap: 10px;
+  background-color: #131315;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.profile_card_light {
+  display: flex;
+  gap: 10px;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.profile_details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  line-height: 22px;
+  letter-spacing: 2%;
+}
+
+.profile_details_light {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.desc_summary {
+  color: #d3d3d3;
+  line-height: 20px;
+  letter-spacing: 2%;
+  margin-top: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 95%;
+  padding-right: 5px;
+}
+
+.desc_summary_light {
+  color: #000;
+  line-height: 20px;
+  letter-spacing: 2%;
+  margin-top: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 95%;
+  padding-right: 5px;
+}
+
+.detailed_desc {
+  cursor: pointer;
+  color: #6db8fd;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.profile_title {
+  font-weight: 500;
+  margin-top: -5px;
+}
+
+.pagination_wrapper {
+  margin-top: 20px;
+}
+
+.pagination_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 16px;
+}
+
+.pagination_btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.pagination_btn_light {
+  background-color: #ffffff;
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+.pagination_btn_light:hover:not(:disabled) {
+  background-color: #f3f4f6;
+}
+
+.pagination_btn_dark {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: #ffffff;
+}
+
+.pagination_btn_dark:hover:not(:disabled) {
+  background-color: #374151;
+}
+
+.pagination_btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination_text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .detailed_desc {
+    background: #6db8fd33;
+    text-align: center;
+    gap: 10px;
+    opacity: 1;
+    border-radius: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .profile_details {
+    width: 50%;
+  }
+
+  .profile_title {
+    margin-top: 0px;
+  }
+
+  .desc_summary {
+    margin-top: 12px;
+    -webkit-line-clamp: 6; /* number of lines to show */
+  }
+
+  .desc_summary_light {
+    margin-top: 12px;
+    -webkit-line-clamp: 6; /* number of lines to show */
+  }
+}

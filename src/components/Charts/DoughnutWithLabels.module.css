@@ -1,0 +1,19 @@
+.flex {
+  display: flex;
+  justify-content: space-between !important;
+  margin-bottom: 10px;
+}
+
+.font_size {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.item {
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+}
+
+.gap {
+  gap: 20px;
+}

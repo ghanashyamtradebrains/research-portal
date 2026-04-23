@@ -1,0 +1,70 @@
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+
+.iconWrapper {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 40px;
+}
+
+/* The Bar Chart Bars */
+.bar {
+  width: 8px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.bar1 {
+  height: 15px;
+}
+.bar2 {
+  height: 25px;
+}
+.bar3 {
+  height: 35px;
+}
+
+/* The Rotating Outer Ring */
+.ring {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 6px solid transparent;
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+/* Adding the side segments using pseudo-elements */
+.ring::before,
+.ring::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 6px solid transparent;
+  border-left-color: #ffffff;
+  border-right-color: #ffffff;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

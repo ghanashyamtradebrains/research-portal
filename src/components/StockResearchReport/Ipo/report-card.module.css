@@ -1,0 +1,592 @@
+.main_card {
+  width: 19.4%;
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: #131315;
+  /* flex: 1; */
+}
+
+.main_card_light {
+  width: 19.4%;
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.main_card_tech {
+  width: 19.4%;
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: #131315;
+  min-height: 450px;
+}
+
+.main_card_tech_light {
+  width: 19.4%;
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  min-height: 450px;
+}
+
+.content_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  padding: 12px;
+  height: 330px;
+}
+
+.content_container_tech {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  height: 100%;
+}
+
+.title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.title_tech {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  height: 30px;
+}
+
+.ipo_image {
+  border-radius: 12px 12px 0 0; /* top-left, top-right, bottom-right, bottom-left */
+  width: 100%;
+}
+
+.card_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* width: 100%; */
+  height: 70px !important;
+  margin-top: 10px;
+
+  @media (max-width: 768px) {
+    height: 100px !important;
+  }
+}
+
+.card_description_light {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* width: 100%; */
+  height: 70px !important;
+  margin-top: 10px;
+}
+
+.card_description_light > span {
+  color: black;
+}
+
+.card_description_tech {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.card_description_tech_light {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.card_description_tech_light > span {
+  color: black;
+}
+
+.date {
+  margin-top: auto; /* 🔥 THIS pins it to the bottom */
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+
+.input_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 10px 0;
+}
+
+.search_btn {
+  position: absolute;
+  margin: 9px 10px 0 0;
+}
+
+.recent_btn {
+  width: 230px;
+  height: 40px;
+  padding: 4px 0;
+  border-radius: 5px;
+  color: white;
+}
+
+.input_autocomplete {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  padding: 4px 0;
+}
+
+/* Technical Report design */
+
+.tech_card_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tech_chips {
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+  padding-bottom: 4px;
+}
+
+.chip_text {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  margin: auto;
+  text-align: center;
+  align-content: center;
+  width: 100%;
+  height: 70px;
+  font-size: 12px;
+}
+
+.chip_text_light {
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 8px;
+  background-color: #f2f6f8;
+  margin: auto;
+  text-align: center;
+  align-content: center;
+  width: 100%;
+  height: 70px;
+}
+
+.tech_desc {
+  line-height: 1.5;
+  padding: 8px;
+  padding-top: 0;
+
+  /* optional safety */
+  word-break: break-word;
+}
+
+.tech_top_container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+@media (max-width: 1480px) {
+  .main_card {
+    width: 24.4% !important;
+  }
+
+  .main_card_light {
+    width: 24.4% !important;
+  }
+
+  .main_card_tech {
+    width: 24.4% !important;
+  }
+
+  .main_card_tech_light {
+    width: 24.4% !important;
+  }
+}
+
+@media (max-width: 1396px) {
+  .main_card {
+    width: 32.5% !important;
+  }
+
+  .main_card_light {
+    width: 32.5% !important;
+  }
+
+  .main_card_tech {
+    width: 32.5% !important;
+  }
+
+  .main_card_tech_light {
+    width: 32.5% !important;
+  }
+}
+
+@media (min-width: 1240px) and (max-width: 1396px) {
+  .main_card {
+    width: 22.37% !important;
+  }
+
+  .main_card_light {
+    width: 22.37% !important;
+  }
+  .main_card_tech {
+    width: 22.37% !important;
+  }
+
+  .main_card_tech_light {
+    width: 22.37% !important;
+  }
+}
+
+@media (max-width: 876px) {
+  .main_card {
+    width: 49% !important;
+  }
+
+  .main_card_light {
+    width: 49% !important;
+  }
+  .main_card_tech {
+    width: 49% !important;
+  }
+
+  .main_card_tech_light {
+    width: 49% !important;
+  }
+
+  .tech_chips {
+    display: flex;
+    gap: 10px;
+  }
+
+  /* .input_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  } */
+
+  .recent_btn {
+    width: 330px;
+    height: 40px;
+    padding: 4px 0;
+    border-radius: 5px;
+  }
+  .content_container {
+    height: 280px;
+  }
+}
+
+@media (max-width: 577px) {
+  .main_card {
+    width: 48.3% !important;
+  }
+
+  .main_card_light {
+    width: 48.3% !important;
+  }
+
+  .main_card_tech {
+    width: 100% !important;
+  }
+
+  .main_card_tech_light {
+    width: 100% !important;
+  }
+
+  .input_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .tech_desc {
+    line-height: 1.5;
+    padding: 8px;
+    padding-top: 0;
+
+    /* optional safety */
+    word-break: break-word;
+  }
+}
+
+/* make the wrapper explicitly positioned (you already set it inline; this keeps it in CSS) */
+.image_wrapper {
+  position: relative; /* container for absolute badges */
+  width: 100%;
+  display: block;
+}
+
+/* position the 1 day + maximize button on top of image */
+.tech_top_container {
+  position: absolute;
+  top: 8px; /* distance from top of image */
+  left: 8px; /* distance from left */
+  right: 8px; /* allow maximize button sit to the right */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  z-index: 5; /* above image */
+  pointer-events: none; /* let clicks pass through unless enabled on children */
+}
+
+/* make each badge clickable — override pointer-events for spans */
+.tech_top_container > span {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* small pill for the "1 day" text (left) */
+.tech_top_container > span:first-child {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.92
+  ); /* light pill (adjust for dark mode below) */
+  color: #111;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* maximize icon container (right) - circular style */
+.tech_top_container > span:last-child {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+}
+
+/* if you have dark/light mode, prefer using a modifier class on a parent;
+   below are examples — adjust class names to match your app's toggles */
+
+/* dark mode: darker pill with white icon/text */
+.main_card_tech .tech_top_container > span:first-child,
+.main_card_tech .tech_top_container > span:last-child {
+  background: rgba(20, 22, 28, 0.6);
+  color: #fff;
+}
+
+/* light mode: ensure contrast on white cards */
+.main_card_tech_light .tech_top_container > span:first-child,
+.main_card_tech_light .tech_top_container > span:last-child {
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+}
+
+/* keep the image below the badges */
+
+/* tweak spacing on small screens */
+@media (max-width: 576px) {
+  .tech_top_container {
+    top: 6px;
+    left: 6px;
+    right: 6px;
+  }
+  .tech_top_container > span:first-child {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+  .tech_top_container > span:last-child {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.title_container {
+  font-size: 16px;
+  font-weight: 600;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+/* ===============================
+   TECH MODAL – SAME CARD LAYOUT
+   =============================== */
+
+.techModalWrapper :global(.ant-modal-content) {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Card shell */
+.techModalCard {
+  background: #292e3f;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.techModalCardLight {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Content */
+.techModalContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top overlay */
+.techModalTop {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.techModalTop span {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Image */
+.techModalImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px 16px 0 0;
+}
+
+/* Description wrapper */
+.techModalDesc {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  color: #fff;
+}
+
+.techModalDescLight {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  color: #111;
+}
+
+/* Body grows, date sticks bottom */
+.techModalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Company bar */
+.techModalCompanyBar {
+  position: relative;
+  width: 100%;
+  padding: 0 12px 12px 12px;
+  font-weight: 600;
+}
+
+/* Chips */
+.techModalChips {
+  display: flex;
+  gap: 10px;
+}
+
+.techModalChip {
+  background: #3b3f4f;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.techModalChipLight {
+  background: #f2f6f8;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Description text */
+.techModalText {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Date pinned */
+.techModalDate {
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .techModalWrapper :global(.ant-modal) {
+    max-width: 92vw;
+  }
+
+  .techModalChips {
+    flex-direction: column;
+  }
+}
+
+/* Aspect-ratio image wrapper */
+.techModalImageWrap {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* 🔥 guarantees correct ratio */
+  border-radius: 8px 8px 0 0;
+  background: #000;
+}
+
+/* Image itself */
+.techModalImage {
+  /* object-fit: cover; */
+}
