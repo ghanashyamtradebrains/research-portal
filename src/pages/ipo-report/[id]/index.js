@@ -154,7 +154,7 @@ function Preview({ previewData }) {
   return (
     <div
       className="bg-color-white text-black w-100"
-      style={{ background: "#343434" }}
+      style={{ background: "#343434", padding: "30px" }}
     >
       <div className={styles.breadcrumb}>
         <BreadCrumb linkData={breadCrumbData} current={`Ipo Report`} />
@@ -313,8 +313,8 @@ function Preview({ previewData }) {
               ></p>
             </div>
             <div className="table-shadow p-10 mb-10 br-5 bg-dark-black mb-20 fs-12">
-              <p className="fw-700 fs-14-12 mb-10">Analyst</p>
-              <p className="fw-400 fs-14-12 mb-10">
+              <p className="fw-700 text-white fs-14-12 mb-10">Analyst</p>
+              <p className="fw-400 text-white fs-14-12 mb-10">
                 {previewData?.analysts} ({previewData?.analysts_email})
               </p>
               <hr style={{ border: "1px solid #585656" }} />
