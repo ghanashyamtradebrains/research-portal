@@ -295,7 +295,7 @@ function LayoutClient({ children }) {
       router.asPath === "/portal-ai-usage-cost" ? (
         <></>
       ) : (
-        !isNotifyOpen && windowWidth <= 600 && <MobileNavBar />
+        !isNotifyOpen && windowWidth <= 600 && ""
       )}
     </div>
   );

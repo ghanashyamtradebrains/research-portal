@@ -86,6 +86,11 @@ function NavBarv2({
       "/stock-research-report",
       "/research-report",
       "/smallcase",
+      "/index",
+      "/heatmaps",
+      "/heatmap",
+      "/stock",
+      "/marketstats",
     ];
     if (allowedPrefixes.some((prefix) => path.startsWith(prefix))) {
       router.push(path);
@@ -240,10 +245,8 @@ function NavBarv2({
 
   const menu = (
     <Menu
-      className={`ff-poppins ${
-        lightMode ? "menu-DropDwon-light" : "menu-DropDwon-dark bg-dark-black "
-      } `}
-      style={{ width: "250px", height: "auto" }}
+      className="ff-poppins menu-DropDwon-dark bg-dark-black"
+      style={{ width: "250px", height: "auto", backgroundColor: "#131315" }}
       items={[
         {
           label: (
@@ -537,19 +540,19 @@ function NavBarv2({
             name: "Research Report",
             link: "research-reports",
           },
-          {
-            name: "Markets",
-            link: "markets",
-          },
-          {
-            name: "Portal AI",
-            featureText: "New",
-            link: "/portal-ai",
-          },
-          {
-            name: "View Pricing",
-            link: "/getpremium",
-          },
+          // {
+          //   name: "Markets",
+          //   link: "markets",
+          // },
+          // {
+          //   name: "Portal AI",
+          //   featureText: "New",
+          //   link: "/portal-ai",
+          // },
+          // {
+          //   name: "View Pricing",
+          //   link: "/getpremium",
+          // },
         ]
       : [
           {
@@ -566,19 +569,19 @@ function NavBarv2({
             name: "Research Report",
             link: "research-reports",
           },
-          {
-            name: "Markets",
-            link: "markets",
-          },
-          {
-            name: "Heatmaps",
-            link: "index/NIFTY/heatmap",
-          },
-          {
-            name: "Portal AI",
-            featureText: "New",
-            link: "/portal-ai",
-          },
+          // {
+          //   name: "Markets",
+          //   link: "markets",
+          // },
+          // {
+          //   name: "Heatmaps",
+          //   link: "index/NIFTY/heatmap",
+          // },
+          // {
+          //   name: "Portal AI",
+          //   featureText: "New",
+          //   link: "/portal-ai",
+          // },
         ];
 
   const createDropdownItem = (key, label, children = [], link = null) => ({
@@ -673,7 +676,7 @@ function NavBarv2({
           display: "flex",
           gap: "40px",
           padding: "20px",
-          backgroundColor: lightMode ? "#fff" : "#212639",
+          backgroundColor: lightMode ? "#fff" : "#131315",
           color: lightMode ? "#000" : "#AFAFAF",
           borderRadius: "10px",
           width: "550px",
@@ -958,14 +961,14 @@ function NavBarv2({
         });
 
       document.querySelectorAll(".ant-dropdown-menu").forEach((el) => {
-        el.style.backgroundColor = lightMode ? "#fff" : "#212639";
+        el.style.backgroundColor = lightMode ? "#fff" : "#131315";
         el.style.color = lightMode ? "#000" : "#fff";
       });
 
       document
         .querySelectorAll(".ant-dropdown-menu-submenu-popup")
         .forEach((el) => {
-          el.style.backgroundColor = lightMode ? "#fff" : "#212639";
+          el.style.backgroundColor = lightMode ? "#fff" : "#131315";
         });
     };
 
@@ -1018,7 +1021,7 @@ function NavBarv2({
               <Image
                 onClick={() =>
                   router.route !== "/" &&
-                  navigateTo(
+                  router.push(
                     auth.userData.access_token ? "/stock-research-report" : "/",
                   )
                 }
@@ -1029,7 +1032,7 @@ function NavBarv2({
                 alt="logo"
               />
             </div>
-            <div
+            {/* <div
               className="only-PC-view"
               style={{
                 flex: 1,
@@ -1041,7 +1044,7 @@ function NavBarv2({
                 planData={auth}
                 custom={true}
               />
-            </div>
+            </div> */}
           </div>
           {/* auth?.userData?.user?.plan?.sname === "Free" || Object.keys(auth?.userData)?.length === 0 */}
           <div className={styles.width_nav_bar}>
@@ -1093,7 +1096,7 @@ function NavBarv2({
                                 each?.name === "Research Report" &&
                                 researchReportLinks,
                               style: {
-                                backgroundColor: lightMode ? "#fff" : "#212639",
+                                backgroundColor: lightMode ? "#fff" : "#131315",
                                 color: lightMode ? "#000" : "#fff",
                                 width: "200px",
                               },
@@ -1230,7 +1233,7 @@ function NavBarv2({
                             menu={{
                               items: heatmapLinks,
                               style: {
-                                backgroundColor: lightMode ? "#fff" : "#212639",
+                                backgroundColor: lightMode ? "#fff" : "#131315",
                                 color: lightMode ? "#000" : "#fff",
                                 width: "200px",
                               },
@@ -1385,13 +1388,14 @@ function NavBarv2({
                     )}
                   </Dropdown>
                 ) : (
-                  <div
-                    onClick={() => dispatch(setToggleForm("login"))}
-                    style={{ width: "76px", height: "35px" }}
-                    className="btn-bg-primary text-white content-center br-5 pointer ml-15"
-                  >
-                    Login
-                  </div>
+                  // <div
+                  //   onClick={() => dispatch(setToggleForm("login"))}
+                  //   style={{ width: "76px", height: "35px" }}
+                  //   className="btn-bg-primary text-white content-center br-5 pointer ml-15"
+                  // >
+                  //   Login
+                  // </div>
+                  ""
                 )}
               </div>
             </div>

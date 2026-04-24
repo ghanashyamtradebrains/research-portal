@@ -32,85 +32,108 @@ function MobileSideBar({
   const auth = useSelector(authStore);
   const navigate = useRouter();
   const dispatch = useDispatch();
+  const navigateTo = (path) => {
+    const allowedPrefixes = [
+      "/admin",
+      "/stock-research-report",
+      "/research-report",
+      "/smallcase",
+      "/index",
+      "/heatmaps",
+      "/heatmap",
+      "/stock",
+      "/marketstats",
+    ];
+    if (allowedPrefixes.some((prefix) => path.startsWith(prefix))) {
+      navigate.push(path);
+    } else {
+      window.open(`https://portal.tradebrains.in${path}`, "_blank");
+    }
+  };
   const checkTrialStatus = useCheckTrialStatus();
   const { Panel } = Collapse;
   //toggle popup
 
   const mainNavLinkArr = [
-    {
-      name: "Portal AI",
-      featureText: "New",
-      link: "/portal-ai",
-    },
+    // {
+    //   name: "Portal AI",
+    //   featureText: "New",
+    //   link: "/portal-ai",
+    // },
     {
       name: "Stock Picks",
       // featureText: "New",
       link: "/stock-research-report",
     },
     {
+      name: "Stock Portfolio",
+      // featureText: "New",
+      link: "/smallcase",
+    },
+    {
       name: "Research Report",
       // featureText: "New",
       link: "/research-reports",
     },
-    {
-      name: "Portfolio Analysis",
-      featureText: "Pro",
-      link: "/portfolio",
-    },
-    {
-      name: "Screener",
-      featureText: "",
-      link: "/screener",
-    },
-    {
-      name: "Watchlist",
-      featureText: "",
-      link: "/watchlist",
-    },
-    {
-      name: "IPO",
-      featureText: "",
-      link: "/ipo",
-    },
-    {
-      name: "Compare Stocks",
-      featureText: "",
-      link: "/stockCompare",
-    },
-    {
-      name: "Portfolio Backtesting",
-      featureText: "",
-      link: "/portfolio-backtesting",
-    },
-    {
-      name: "Market news",
-      featureText: "",
-      link: "/news",
-    },
-    {
-      name: "Superstar Portfolio",
-      featureText: "",
-      link: "/superstars",
-    },
-    {
-      name: "Sector heat map",
-      featureText: "",
-      link: "/heatmaps/sector/banks",
-    },
-    {
-      name: "Calculator",
-      featureText: "",
-      link: "/calculator",
-    },
-    {
-      name: "Stock Exchange Holiday list",
-      featureText: "",
-      link: "/stock-exchange-holiday-list",
-    },
-    {
-      name: "FII/DII Investments",
-      link: "/fii-investments",
-    },
+    // {
+    //   name: "Portfolio Analysis",
+    //   featureText: "Pro",
+    //   link: "/portfolio",
+    // },
+    // {
+    //   name: "Screener",
+    //   featureText: "",
+    //   link: "/screener",
+    // },
+    // {
+    //   name: "Watchlist",
+    //   featureText: "",
+    //   link: "/watchlist",
+    // },
+    // {
+    //   name: "IPO",
+    //   featureText: "",
+    //   link: "/ipo",
+    // },
+    // {
+    //   name: "Compare Stocks",
+    //   featureText: "",
+    //   link: "/stockCompare",
+    // },
+    // {
+    //   name: "Portfolio Backtesting",
+    //   featureText: "",
+    //   link: "/portfolio-backtesting",
+    // },
+    // {
+    //   name: "Market news",
+    //   featureText: "",
+    //   link: "/news",
+    // },
+    // {
+    //   name: "Superstar Portfolio",
+    //   featureText: "",
+    //   link: "/superstars",
+    // },
+    // {
+    //   name: "Sector heat map",
+    //   featureText: "",
+    //   link: "/heatmaps/sector/banks",
+    // },
+    // {
+    //   name: "Calculator",
+    //   featureText: "",
+    //   link: "/calculator",
+    // },
+    // {
+    //   name: "Stock Exchange Holiday list",
+    //   featureText: "",
+    //   link: "/stock-exchange-holiday-list",
+    // },
+    // {
+    //   name: "FII/DII Investments",
+    //   link: "/fii-investments",
+    // },
   ];
 
   return (
@@ -138,7 +161,7 @@ function MobileSideBar({
         }}
         className="ff-poppins "
         drawerStyle={{
-          background: lightMode ? "white" : "#292E3F",
+          background: lightMode ? "white" : "#131315",
           color: lightMode ? "black" : "white",
         }}
         headerStyle={{ marginInline: "16px", padding: "0px" }}
@@ -156,7 +179,7 @@ function MobileSideBar({
             {auth.userData.access_token && (
               <div
                 onClick={() => {
-                  navigate.push("/profile");
+                  navigateTo("/profile");
                   setMobileToggle("NONE");
                 }}
                 className="flex align-items-center"
@@ -193,9 +216,7 @@ function MobileSideBar({
                 <>
                   <div
                     onClick={() => {
-                      each?.link === "/portal-ai"
-                        ? window.open(each?.link, "_blank")
-                        : navigate.push(each?.link);
+                      navigateTo(each?.link);
                       setMobileToggle("NONE");
                     }}
                     className={`fw-500 fs-s-16 d-flex gap-10px align-items-center `}
@@ -238,7 +259,7 @@ function MobileSideBar({
               expandIconPosition="end"
               bordered={false}
               className="ff-poppins "
-              style={{ background: lightMode ? "#fff" : "#292E3F" }}
+              style={{ background: lightMode ? "#fff" : "#131315" }}
             >
               <Panel
                 header={
@@ -347,7 +368,7 @@ function MobileSideBar({
                 <>
                   <div
                     onClick={() => {
-                      navigate.push(each?.link);
+                      navigateTo(each?.link);
                       setMobileToggle("NONE");
                     }}
                     className="fw-500 fs-s-16 d-flex gap-10px align-items-center"
@@ -375,7 +396,7 @@ function MobileSideBar({
             auth?.userData?.user?.plan?.planId === "lifetime" ? (
               <div
                 onClick={() => {
-                  navigate.push("/premium-support");
+                  navigateTo("/premium-support");
                   setMobileToggle("NONE");
                 }}
                 className="fw-500 fs-s-16"
@@ -386,7 +407,7 @@ function MobileSideBar({
             ) : (
               <div
                 onClick={() => {
-                  navigate.push("/premium-support");
+                  navigateTo("/premium-support");
                   setMobileToggle("NONE");
                 }}
                 className="fw-500 fs-s-16"
@@ -403,8 +424,8 @@ function MobileSideBar({
                     fingradAccessStatus.url !== null
                     ? window.open(fingradAccessStatus?.url)
                     : fingradAccessStatus.url === null
-                    ? window.open("https://joinfingrad.com/")
-                    : navigate.push("/joinfingrad");
+                      ? window.open("https://joinfingrad.com/")
+                      : navigate.push("/joinfingrad");
                 }}
                 className="fw-500 fs-s-16"
                 style={{ padding: "20px 40px 1px 16px" }}
@@ -423,16 +444,17 @@ function MobileSideBar({
                 Logout
               </div>
             ) : (
-              <button
-                className="w-100 h-40px btn-bg-primary text-white br-5 pb-fixed"
-                onClick={() => {
-                  setMobileToggle("NONE");
-                  dispatch(setToggleForm("login"));
-                  // navigate.push("/login");
-                }}
-              >
-                Login
-              </button>
+              // <button
+              //   className="w-100 h-40px btn-bg-primary text-white br-5 pb-fixed"
+              //   onClick={() => {
+              //     setMobileToggle("NONE");
+              //     dispatch(setToggleForm("login"));
+              //     // navigate.push("/login");
+              //   }}
+              // >
+              //   Login
+              // </button>
+              ""
             )}
           </div>
           <div
@@ -441,7 +463,7 @@ function MobileSideBar({
               lightMode ? "bg-gray " : "bluedark-gradient"
             } `}
           >
-            {!authStatus?.access_token && (
+            {/* {!authStatus?.access_token && (
               <div className="d-flex align-items-center">
                 <p className="fw-500 mb-0">Ready to get started ?</p>
                 <p
@@ -452,11 +474,11 @@ function MobileSideBar({
                   Sign up for free
                 </p>
               </div>
-            )}
+            )} */}
             <div>
               <p
                 onClick={() => {
-                  navigate.push("/getpremium");
+                  navigateTo("/getpremium");
                   setMobileToggle("NONE");
                 }}
                 className="fw-500   mb-0 underline pointer"

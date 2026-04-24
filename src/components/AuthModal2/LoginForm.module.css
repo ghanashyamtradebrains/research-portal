@@ -1,0 +1,129 @@
+.container {
+  width: 500px;
+  margin: 0 auto;
+  padding: 36px 30px;
+  border-radius: 22px;
+  text-align: center;
+  background: #111314;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.title {
+  margin-bottom: 18px;
+  color: #ff8c24;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.form {
+  width: 100%;
+}
+
+.fieldLabel {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  background: #171a1c;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.input:hover,
+.input:focus {
+  border-color: rgba(255, 140, 36, 0.5) !important;
+  box-shadow: none !important;
+  background: #171a1c !important;
+}
+
+.input.ant-input-password {
+  background: #171a1c;
+}
+
+.input.ant-input-password:hover,
+.input.ant-input-password:focus {
+  border-color: rgba(255, 140, 36, 0.5) !important;
+  box-shadow: none !important;
+  background: #171a1c !important;
+}
+
+.input.ant-input-password input {
+  background: transparent !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+.input.ant-input-password input::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 14px;
+  opacity: 1 !important;
+}
+
+.input.ant-input-password input:hover,
+.input.ant-input-password input:focus {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Additional specific targeting for password input */
+.ant-input-password input::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+  opacity: 1 !important;
+}
+
+.ant-input-password input {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+.button {
+  width: 100%;
+  padding: 12px 16px;
+  background: linear-gradient(90deg, #ff8c24, #ffbf33);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 12px 25px rgba(255, 140, 36, 0.25);
+}
+
+.googleBtn {
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #15181b;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.errorText {
+  color: #ff5a5a;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

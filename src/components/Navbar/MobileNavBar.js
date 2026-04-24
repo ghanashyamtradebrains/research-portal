@@ -10,10 +10,10 @@ import { authStore } from "../../redux/reducers/authSlice";
 function MobileNavBar() {
   const { lightMode } = useSelector(getThemeMode);
   const router = useRouter();
-  console.log("now router: ", router.asPath)
+  console.log("now router: ", router.asPath);
   const UserAuth = useSelector(authStore);
   const isLoggedIn = UserAuth?.userData.access_token;
-  console.log("mobile navbar: ", isLoggedIn)
+  console.log("mobile navbar: ", isLoggedIn);
   const navItems = [
     {
       id: "home",

@@ -1,0 +1,48 @@
+.pageWrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background:
+    radial-gradient(circle at top, rgba(255, 140, 36, 0.14), transparent 30%),
+    linear-gradient(180deg, #111214 0%, #0d0f11 100%);
+  padding: 60px 20px 80px;
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+.pageTitle {
+  margin: 0;
+  color: #ff8c24;
+  font-size: 50px;
+  letter-spacing: 0.2rem;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+}
+
+.upgradeBox {
+  text-align: center;
+  margin-top: 100px;
+  color: #fff;
+}
+
+.upgradeButton {
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #ff8c24, #ffbf33);
+  color: #111;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .pageTitle {
+    font-size: 28px;
+  }
+}
